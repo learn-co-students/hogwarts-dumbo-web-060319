@@ -9,7 +9,7 @@ class HogCard extends Component {
     };
   }
 
-  toggleVisibility = () => {
+  toggleAttributeVisibility = () => {
     this.setState({
       visibleAttributes: !this.state.visibleAttributes
     });
@@ -27,7 +27,7 @@ class HogCard extends Component {
             specialty={this.props.hog.specialty}
             weight={this.props.hog.weight} />
         : null}
-        <div className="ui bottom attached button" onClick={this.toggleVisibility}>
+        <div className="ui bottom attached button" onClick={this.toggleAttributeVisibility}>
           <i className="add icon"></i>
           {this.state.visibleAttributes ? 'Hide Details' : 'Show Details'}
         </div>

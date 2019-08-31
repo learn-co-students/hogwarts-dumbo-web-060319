@@ -19,41 +19,40 @@ const hogsDataWithImages = hogsData.map(hog =>
 )
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      greasedFilter: false,
-      sortBy: 'weight',
-      hogsData: hogsDataWithImages
+      greasedFilter: null,
+      sortBy: null
     };
   }
 
-  handleFilter = e => {
+  handleGreasedFilterClick = e => {
     this.setState({
       [e.target.name]: e.target.checked
     });
   }
 
-  handleSort = e => {
+  handleSortByClick = e => {
     this.setState({
       [e.target.name]: e.target.value
     });
   }
-
-  filteredHogs = () => {
-  }
-
 
   render() {
     return (
       <div className="App">
         <div className="ui one row grid">
           <Nav
-            handleFilter={this.handleFilter}
-            handleSort={this.handleSort}
+            handleGreasedFilterClick={this.handleGreasedFilterClick}
+            handleSortByClick={this.handleSortByClick}
           />
         </div>
-        <HogsList hogsData={this.state.hogsData} />
+        <HogsList
+          hogsData={hogsDataWithImages}
+          greasedFilter={this.state.greasedFilter}
+          sortBy={this.state.sortBy}
+        />
       </div>
     )
   }

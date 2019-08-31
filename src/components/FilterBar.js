@@ -5,7 +5,7 @@ class FilterBar extends Component {
   render() {
     return (
       <div className='filter-bar'>
-        <form onClick={this.props.handleFilter}>
+        <form onClick={this.props.handleGreasedFilterClick}>
           <ul>
             <li>
               <label>
@@ -15,7 +15,7 @@ class FilterBar extends Component {
             </li>
           </ul>
         </form>
-        <form onClick={this.props.handleSort}>
+        <form onClick={this.props.handleSortByClick}>
           <ul>
             <li>
               <label>

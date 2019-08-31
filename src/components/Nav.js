@@ -9,8 +9,8 @@ class Nav extends Component {
 			<div className="navWrapper ui two column grid">
 				<div className="column">
 					<FilterBar
-						handleFilter={this.props.handleFilter}
-						handleSort={this.props.handleSort}
+						handleGreasedFilterClick={this.props.handleGreasedFilterClick}
+						handleSortByClick={this.props.handleSortByClick}
 					/>
 				</div>
 				<div className="column">
