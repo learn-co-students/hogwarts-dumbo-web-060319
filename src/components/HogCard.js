@@ -17,9 +17,9 @@ class HogCard extends Component {
 
   render() {
     return (
-      <div className='ui fluid card'>
-        <div className='image'><img src={this.props.hog.img} alt={this.props.hog.name} /></div>
-        <div className='header'>{this.props.hog.name}</div>
+      <div className='ui fluid card pigTile' onClick={this.toggleAttributeVisibility}>
+        <img src={this.props.hog.img} className='ui fluid image' alt={this.props.hog.name} />
+        <h3 className='header'>{this.props.hog.name}</h3>
         {this.state.visibleAttributes ?
           <HogAttributes
             greased={this.props.hog.greased}
@@ -27,7 +27,7 @@ class HogCard extends Component {
             specialty={this.props.hog.specialty}
             weight={this.props.hog.weight} />
         : null}
-        <div className="ui bottom attached button" onClick={this.toggleAttributeVisibility}>
+        <div className="ui bottom attached button">
           <i className="add icon"></i>
           {this.state.visibleAttributes ? 'Hide Details' : 'Show Details'}
         </div>
