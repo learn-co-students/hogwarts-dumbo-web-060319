@@ -13,6 +13,7 @@
 }
 
 .navWrapper {
+  margin-top: 20px;
   margin-bottom: 2%;
 }
 
@@ -59,12 +60,12 @@ ul {
 .normalText ul {
   font-family: Georgia, serif;
   font-size: .75em;
-  text-align: left;
+  text-align: center;
 }
 
 .subtleText {
   color: #D1D1D1;
-  font-size: .75em; 
+  font-size: .75em;
 }
 
 
